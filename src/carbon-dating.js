@@ -21,7 +21,7 @@ function dateSample(sampleActivity) {
   // throw new NotImplementedError('Not implemented');
   // remove line with error and write your code here
 
-  if (sampleActivity == ' \n\t\r') {
+  if (sampleActivity !== /^(0|[1-9]\d*)?(\.\d+)?(?<=\d)$/g) {
     return false;
   } else {
     let k = (Math.log(2)) / HALF_LIFE_PERIOD;
